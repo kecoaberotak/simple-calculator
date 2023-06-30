@@ -1,3 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .container {
   width: 650px;
   height: 650px;
@@ -10,16 +16,14 @@
   'opsi opsi opsi sama-dengan';
   grid-template-rows: 150px 80px auto;
   grid-template-columns: 1fr;
-  align-items: end;
-  justify-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 .hasil {
   grid-area: hasil;
   background-color: black;
   color: white;
-  height: 100px;
-  width: 600px;
   border: 1px solid black;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -29,4 +33,33 @@
   padding-right: 15px;
   font-size: 50px;
   font-weight: bold;
+}
+
+.operasi {
+  grid-area: operasi;
+  background-color: lightgray;
+  font-size: 50px;
+  font-weight: bold;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.operasi span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+.operasi span:first-child{
+  border-left: none;
+}
+
+.operasi span:last-child{
+  border-right: none;
+}
+
+.operasi span:hover {
+  background-color: rgb(163, 163, 163);
 }
