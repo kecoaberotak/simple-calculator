@@ -1,24 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
   width: 650px;
-  height: 650px;
+  height: 600px;
   background-color: lightblue;
+  border: 1px solid lightblue;
+  border-radius: 15px;
   margin: 20px auto;
   display: grid;
   grid-template-areas: 
   'hasil hasil hasil hasil'
-  'operasi operasi operasi operasi'
-  'opsi opsi opsi sama-dengan';
+  'operator operator operator operator'
+  'user user user user';
   grid-template-rows: 150px 80px auto;
-  grid-template-columns: 1fr;
+  grid-template-columns: 600px;
   justify-content: center;
   align-content: center;
 }
+
+/* ====== HASIL ====== */
 
 .hasil {
   grid-area: hasil;
@@ -35,16 +42,19 @@
   font-weight: bold;
 }
 
-.operasi {
-  grid-area: operasi;
+/* ====== OPERATOR ====== */
+
+.operator {
+  grid-area: operator;
   background-color: lightgray;
   font-size: 50px;
   font-weight: bold;
   display: grid;
   grid-auto-flow: column;
+  grid-auto-columns: 1fr;
 }
 
-.operasi span{
+.operator span{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,14 +62,90 @@
   cursor: pointer;
 }
 
-.operasi span:first-child{
+.operator span:first-child{
   border-left: none;
 }
 
-.operasi span:last-child{
+.operator span:last-child{
   border-right: none;
 }
 
-.operasi span:hover {
+.operator span:hover {
   background-color: rgb(163, 163, 163);
+}
+
+/* ====== USER INPUT ====== */
+.user-input {
+  grid-area: user;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 300px;
+}
+
+/* ====== INPUT ====== */
+.input {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.input p {
+  background-color: white;
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.input p:nth-child(1){
+  border-left: none;
+}
+
+.input p:nth-child(4){
+  border-left: none;
+}
+
+.input p:nth-child(7){
+  border-left: none;
+}
+
+.input p:nth-child(10){
+  border-left: none;
+  border-bottom: none;
+  border-bottom-left-radius: 15px;
+}
+
+.input p:nth-child(11){
+  border-bottom: none;
+}
+
+.input p:nth-child(12){
+  border-bottom: none;
+}
+
+.input p:hover {
+  background-color: rgb(234, 232, 232);
+}
+
+
+/* ====== SAMA-DENGAN ====== */
+.sama-dengan {
+  border: 1px solid gray;
+  border-right: none;
+  border-bottom: none;
+  border-bottom-right-radius: 15px;
+  background-color: salmon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sama-dengan:hover {
+  background-color: lightsalmon;
 }
