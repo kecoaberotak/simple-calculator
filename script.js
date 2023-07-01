@@ -89,10 +89,10 @@ function tambah(){
 // Kurang
 function kurang(){
   if(hasil === 0){
-    hasil = value1;
-    hasil -= value2;
+    hasil = parseFloat(value1) || 0;
+    hasil -= parseFloat(value2);
   }else if(hasil != 0 && hasil >= 0){
-    hasil -= value2;
+    hasil -= parseFloat(value2);
   }else if(hasil < 0){
     hasil += parseFloat(value2);
   }
