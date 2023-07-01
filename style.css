@@ -47,14 +47,14 @@
 .operator {
   grid-area: operator;
   background-color: lightgray;
-  font-size: 50px;
-  font-weight: bold;
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
 }
 
-.operator span{
+.operator button{
+  font-size: 50px;
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,15 +62,15 @@
   cursor: pointer;
 }
 
-.operator span:first-child{
+.operator button:first-child{
   border-left: none;
 }
 
-.operator span:last-child{
+.operator button:last-child{
   border-right: none;
 }
 
-.operator span:hover {
+.operator button:hover {
   background-color: rgb(163, 163, 163);
 }
 
@@ -89,7 +89,7 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-.input p {
+.input button {
   background-color: white;
   border: 1px solid gray;
   display: flex;
@@ -100,33 +100,33 @@
   cursor: pointer;
 }
 
-.input p:nth-child(1){
+.input button:nth-child(1){
   border-left: none;
 }
 
-.input p:nth-child(4){
+.input button:nth-child(4){
   border-left: none;
 }
 
-.input p:nth-child(7){
+.input button:nth-child(7){
   border-left: none;
 }
 
-.input p:nth-child(10){
+.input button:nth-child(10){
   border-left: none;
   border-bottom: none;
   border-bottom-left-radius: 15px;
 }
 
-.input p:nth-child(11){
+.input button:nth-child(11){
   border-bottom: none;
 }
 
-.input p:nth-child(12){
+.input button:nth-child(12){
   border-bottom: none;
 }
 
-.input p:hover {
+.input button:hover {
   background-color: rgb(234, 232, 232);
 }
 
@@ -141,7 +141,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: bold;
   cursor: pointer;
 }
