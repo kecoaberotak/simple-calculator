@@ -37,6 +37,14 @@ operator.addEventListener('click', function(e){
     case 'kurang':
       condition = '-';
       break;
+
+    case 'kali':
+      condition = '*';
+      break;
+
+    case 'bagi':
+      condition = '/';
+      break;
   
     default:
       break;
@@ -53,6 +61,14 @@ samaDengan.addEventListener('click', () => {
 
     case '-':
       kurang();
+      break;
+
+    case '*':
+      kali();
+      break;
+
+    case '/':
+      bagi();
       break;
   
     default:
@@ -96,6 +112,26 @@ function kurang(){
   }else if(hasil < 0){
     hasil += parseFloat(value2);
   }
+  display.textContent = hasil;
+  return hasil;
+}
+
+// kali
+function kali(){
+  if(hasil === 0){
+    hasil = parseFloat(value1) || 0;
+    hasil *= parseFloat(value2);
+  }else hasil *= parseFloat(value2);
+  display.textContent = hasil;
+  return hasil;
+}
+
+// bagi
+function bagi(){
+  if(hasil === 0){
+    hasil = parseFloat(value1) || 0;
+    hasil /= parseFloat(value2);
+  }else hasil /= parseFloat(value2);
   display.textContent = hasil;
   return hasil;
 }
